@@ -1,0 +1,22 @@
+﻿openapi: 3.0.0
+info:
+  title: Greet API
+  version: 1.0.0
+paths:
+  /greet/{name}:
+    get:
+      summary: Retrieve Personalized Greeting Message
+      parameters:
+        - name: name
+          in: path
+          required: true
+          description: The name to greet
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A personalized greeting message
+          content:
+            text/plain:
+              schema:
+                type: string

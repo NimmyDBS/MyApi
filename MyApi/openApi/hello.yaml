@@ -1,0 +1,15 @@
+﻿openapi: 3.0.0
+info:
+  title: Hello API
+  version: 1.0.0
+paths:
+  /hello:
+    get:
+      summary: Retrieve Hello Message
+      responses:
+        '200':
+          description: A simple greeting message
+          content:
+            text/plain:
+              schema:
+                type: string
