@@ -1,10 +1,20 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: MyApi
+  name: my-api
+  description: My .NET API
   annotations:
-    github.com/project-slug: NimmyDBS/MyApi
+    backstage.io/github-repository: https://github.com/NimmyDBS/MyApi
+    backstage.io/has-api-docs: true
+    backstage.io/has-mock-data: false
+    backstage.io/owner: guests
 spec:
-  type: other
-  lifecycle: unknown
- - owner: guests
+  type: service
+  lifecycle: production
+  owner: guests
+  implementsApis:
+    - owner: guests
+      provideApis:
+        - kind: openapi
+          lifecycle: production
+          value: /openapi/hello.yaml
