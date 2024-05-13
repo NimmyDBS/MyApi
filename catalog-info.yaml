@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: MyApi
+  annotations:
+    github.com/project-slug: NimmyDBS/MyApi
+spec:
+  type: other
+  lifecycle: unknown
+  owner: guests
