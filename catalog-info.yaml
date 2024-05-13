@@ -5,6 +5,11 @@ metadata:
   annotations:
     github.com/project-slug: NimmyDBS/MyApi
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  lifecycle: experimental
   owner: guests
+  providesApis:
+    - name: hello
+      openApiDefinitionPath: /openapi/hello.yaml
+    - name: greet
+      openApiDefinitionPath: /openapi/greet.yaml
